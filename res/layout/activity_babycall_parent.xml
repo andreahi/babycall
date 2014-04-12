@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:id="@+id/rLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sky" >
+
+      <com.google.ads.AdView
+          android:id="@+id/adView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          ads:adSize="SMART_BANNER"
+          ads:adUnitId="a1513b6b67e09dd"
+          ads:loadAdsOnCreate="true" />
+
+      <ProgressBar
+          android:id="@+id/progressBarBattery"
+          style="?android:attr/progressBarStyleHorizontal"
+ 		  android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/adView"
+          android:background="@drawable/battery"
+          android:max="100"
+          android:onClick="onClickBattery"
+          android:progress="1" />
+
+      <TextView
+          android:id="@+id/labelConnectionStatus"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/adView"
+          android:text="not connected"
+          android:textAppearance="?android:attr/textAppearanceLarge" />
+
+      <SeekBar
+          android:id="@+id/seek"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_above="@+id/btnConnect"
+          
+          android:background="@drawable/speaker"
+          android:max="100"
+          android:minHeight="40dp"
+          android:onClick="seekBarCliked"
+          android:progress="20"
+          android:scrollbarStyle="outsideInset"
+          android:secondaryProgress="50" />
+
+      <Button
+          android:id="@+id/btnConnect"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_centerHorizontal="true"
+          android:background="@drawable/btnconnect"
+          android:onClick="connectButtonListener"
+          android:text="Connect"
+          android:textSize="@dimen/padding_large" />
+
+      <ImageView
+          android:id="@+id/imageViewPreviewMin"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/seek"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_below="@+id/labelConnectionStatus"
+          android:background="@drawable/black"
+          android:onClick="fullscreen" />
+      
+</RelativeLayout>

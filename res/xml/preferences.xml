@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="Usevideo"
+        android:title="Use video"
+        android:summary="Check to enable video"
+        android:defaultValue="true" />
+    <CheckBoxPreference
+        android:key="nv"
+        android:title="Nightvision"
+        android:summary="May increase visability in dark rooms"
+        android:defaultValue="false"
+        />
+    <CheckBoxPreference
+        android:key="UseHD"
+        android:title="HD Video"
+        android:summary="Increase Video quality"
+        android:defaultValue="false"
+        /> 
+</PreferenceScreen>

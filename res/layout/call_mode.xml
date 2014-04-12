@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/activateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="OnActivateClicked"
+        android:text="Activate" />
+
+    <Button
+        android:id="@+id/btnHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:duplicateParentState="true"
+        android:onClick="helpClicked"
+        android:text="Help" />
+
+     <com.google.ads.AdView
+         android:id="@+id/adView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true"
+         ads:adSize="SMART_BANNER"
+         ads:adUnitId="a1513b6b67e09dd"
+         ads:loadAdsOnCreate="true" >
+     </com.google.ads.AdView>
+
+     <SeekBar
+         android:id="@+id/seekbar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/activateButton"
+         android:layout_alignParentLeft="true"
+         android:layout_marginBottom="88dp"
+         android:background="@drawable/speaker"
+         android:max="100"
+         android:maxHeight="300dp"
+         android:maxWidth="300dp"
+         android:minHeight="150dp"
+         android:minWidth="1dp"
+         android:onClick="seekBarCliked"
+         android:progress="20"
+         android:rotation="270"
+         android:scrollbarStyle="outsideInset"
+         android:secondaryProgress="50" />
+
+     <EditText
+         android:id="@+id/phoneText"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/adView1"
+         android:layout_marginTop="17dp"
+         android:ems="10"
+         android:hint="Phone number"
+         android:inputType="phone" >
+
+         <requestFocus />
+     </EditText>
+
+</RelativeLayout>
